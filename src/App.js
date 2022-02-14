@@ -7,6 +7,7 @@ function App() {
       <div className='divContainter'>
         <div className='mainDisplay'>
        <p>Current Weather Conditions:</p>
+       <CurrentWeather />
        <p>5 Day Forecast:</p>
         </div>
         <div className='right-side'>
