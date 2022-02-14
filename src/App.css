@@ -1,13 +1,9 @@
 .App {
   text-align: center;
 }
-
-
-.information {
-  background-image: url('./image/xxxl-clear-blue-sky-panorama-konradlew.jpg');
-  
-  color: rgb(255, 0, 0);
-  height: 500vh
+.divContainter {
+  display: flex;
+  justify-content: space-around;
 }
 .mainDisplay{
   background-color: pink;

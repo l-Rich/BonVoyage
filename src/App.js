@@ -6,14 +6,15 @@ function App() {
     <section>
       <div className='divContainter'>
         <div className='mainDisplay'>
-       
+       <p>Current Weather Conditions:</p>
+       <p>5 Day Forecast:</p>
         </div>
         <div className='right-side'>
 
         </div>
       </div>
-      <div>
-      <form>
+      <div className='search'>
+      Select a new city <form>
         <input type="text" />
         <input type="submit" value="submit"></input>
     </form>
