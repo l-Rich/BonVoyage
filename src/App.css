@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.div-containter{
+  display: flex;
+  
+}
+.information {
+  background-image: url('./image/xxxl-clear-blue-sky-panorama-konradlew.jpg');
+  background-repeat: no-repeat;
+  color: rgb(255, 0, 0);
+  height: 500vh
+}
+.side-image{
+  background-image: url('./image/BerkshiresHotAirBalloonRide.jpg')
+  height 500vg
+}
+.App-link {
+  color: #61dafb;
+}
+
+
