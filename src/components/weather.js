@@ -6,11 +6,11 @@ function CurrentWeather () {
     const [currentWeather, setCurrentWeather] = useState([])
 
     useEffect(() => {
-        fetch("http://api.openweathermap.org/data/2.5/weather?lat=42.3314&lon=83.0458&appid=67bb6623a4284a1abf2dcd12ee9ea8d6&units=imperial")
+        fetch("http://api.openweathermap.org/data/2.5/weather?lat=42.3314&lon=-83.0458&appid=67bb6623a4284a1abf2dcd12ee9ea8d6&units=imperial")
         .then(res => res.json())
-            .then((json) =>
-                (results) => {
-                    setCurrentWeather(results)
+            .then(
+                (result) => {
+                    setCurrentWeather(result)
                 })})
     console.log(currentWeather)
 
