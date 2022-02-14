@@ -2,20 +2,24 @@
   text-align: center;
 }
 
-.div-containter{
-  display: flex;
-  
-}
+
 .information {
   background-image: url('./image/xxxl-clear-blue-sky-panorama-konradlew.jpg');
-  background-repeat: no-repeat;
+  
   color: rgb(255, 0, 0);
   height: 500vh
 }
-.side-image{
-  background-image: url('./image/BerkshiresHotAirBalloonRide.jpg')
-  height 500vg
+.mainDisplay{
+  background-color: pink;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 600px;
+  width: 300px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
+
 .App-link {
   color: #61dafb;
 }

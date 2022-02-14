@@ -3,17 +3,22 @@ import CurrentWeather from './components/weather';
 import SearchWeather from './components/SearchContainer'
 function App() {
   return (
-    <section className="div-container">
+    <section>
+      <div className='divContainter'>
+        <div className='mainDisplay'>
+       
+        </div>
+        <div className='right-side'>
+
+        </div>
+      </div>
       <div>
-      <CurrentWeather />
-    </div>
-    <div>
-    <form>
+      <form>
         <input type="text" />
         <input type="submit" value="submit"></input>
     </form>
     </div>
-       </section>
+    </section>
        
 
   );
