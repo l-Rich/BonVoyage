@@ -1,21 +1,32 @@
-.App {
+body {
+  background-image: url('./image/Untitled\ design\ \(2\).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(245, 216, 179);
+}.App {
   text-align: center;
 }
 .divContainter {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 .mainDisplay{
-  background-color: pink;
+  background-color: rgb(230, 140, 155);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 600px;
+  height: 400px;
   width: 300px;
-  border: 3px solid black;
+  border: 3px solid whitesmoke;
   border-radius: 10px;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 70px;
 }
+.search{
+  text-align: center;
+  margin: 3%;
 
+}
 .App-link {
   color: #61dafb;
 }
