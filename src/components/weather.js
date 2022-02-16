@@ -1,25 +1,39 @@
 import { useState, useEffect } from 'react'
 
-function CurrentWeather () {
-    let URL = 'api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}'
-    let key =process.env.REACT_APP_API_KEY
-    const [currentWeather, setCurrentWeather] = useState([])
 
+function CurrentWeather (props) {
+    const {city}=props
+    const [currentWeather, setCurrentWeather] = useState()
+    console.log(city)
     useEffect(() => {
-        fetch("http://api.openweathermap.org/data/2.5/weather?lat=42.3314&lon=-83.0458&appid=7f6ac03571b9827d5308f728f9548ca4&units=imperial")
-        .then(res => res.json())
-            .then(
-                (result) => {
-                    setCurrentWeather(result)
-                })})
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
+            .then((res ) => res.json())
+            .then((json) => {
+                console.log(json)
+                setCurrentWeather(json)
+            }) .catch(err => {
+                console.log(err)
+            })
+    }, [city])
     // console.log(currentWeather)
-
-    console.log(currentWeather)
     return (
-        <div>{currentWeather.name}</div>
+        <section>
+            {!city || !currentWeather ? <h2>Loading Weather</h2> 
+            : 
+            <div> 
+              <p>{currentWeather.main?.temp}°F</p>
+            <p>{currentWeather.main?.feels_like}°F</p>
+           
+           <img src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`}></img>  
+            </div>
+            }
+           
+           
+        </section>
     )
     
 }
+
     
 
 export default CurrentWeather
