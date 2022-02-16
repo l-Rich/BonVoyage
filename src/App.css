@@ -12,23 +12,45 @@ body {
   flex-direction: column;
 }
 .mainDisplay{
-  background-color: rgb(230, 140, 155);
+  background-color: rgb(255, 175, 188);
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
-  width: 300px;
+  width: 600px;
   border: 3px solid whitesmoke;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: 70px;
+  text-align: center;
 }
 .search{
   text-align: center;
   margin: 3%;
 
 }
+.forecast-days-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.days{
+  display:flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .App-link {
   color: #61dafb;
 }
-
-
+.forecast-header{
+  text-align: center;
+}
+.forecast-days{
+  text-align: center;
+  font-size: 8px
+}
+.forecast-weather{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  
+}

@@ -22,15 +22,26 @@ function App() {
     <section>
       <div className='divContainter'>
         <div className='mainDisplay'>
-          <ul>Current Weather Conditions:</ul>
+          <ul className="currentWeather"><h1>Current Temperature:</h1></ul>
           <CurrentWeather 
           city={search}/>
-          <ul>8 Day Forecast:
+            <div className="Forecast-Header"><h4>Temperature the next 8 days</h4></div>
+            <div className="forecast-days-container">
+                <div className="days">Day 1 </div>
+                <div className="days">Day 2 </div>
+                <div className="days">Day 3 </div>
+                <div className="days">Day 4 </div>
+                <div className="days">Day 5 </div>
+                <div className="days">Day 6 </div>
+                <div className="days">Day 7 </div>
+                <div className="days">Day 8 </div>
+          </div>
+          <div className="forecast-weather">
           <ForecastWeather
           city={search} 
           latitude= {cityLat}
           longitude= {cityLng} />
-          </ul>
+          </div>
         </div>
           <div className='search'>
           <SearchWeather 
