@@ -3,6 +3,7 @@ import CurrentWeather from './components/weather';
 import SearchWeather from './components/SearchContainer'
 import ForecastWeather from './components/Forecast';
 import { useState, useEffect } from 'react';
+import SeussSays from './components/SeussStuff';
 
 function App() {
   const [search, setSearch] = useState("Detroit")
@@ -21,19 +22,22 @@ function App() {
     <section>
       <div className='divContainter'>
         <div className='mainDisplay'>
-          <p>Current Weather Conditions:</p>
+          <ul>Current Weather Conditions:</ul>
           <CurrentWeather 
           city={search}/>
-          <p>8 Day Forecast:
+          <ul>8 Day Forecast:
           <ForecastWeather
           city={search} 
           latitude= {cityLat}
           longitude= {cityLng} />
-          </p>
+          </ul>
         </div>
           <div className='search'>
           <SearchWeather 
           setSearch={setSearch} />
+        </div>
+        <div>
+          <SeussSays />
         </div>
       </div>
     </section>
