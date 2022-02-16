@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './Forecast.css'
 
 
 function ForecastWeather (props) {
@@ -18,7 +19,7 @@ function ForecastWeather (props) {
     // }, [])
     
     useEffect(() => {
-        fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={current,minutely,hourly}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={current,minutely,hourly}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
             .then((res ) => res.json())
             .then((json) => {
                 setForcastWeather(json.daily)
@@ -30,7 +31,7 @@ function ForecastWeather (props) {
            <div>
                {
                forcastWeather.map((byDay)=>{   
-                return <div className="forcast">{byDay.temp?.day}</div>
+                return <ul className="forecast">{byDay.temp?.day}</ul>
                })
                }
            </div>

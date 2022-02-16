@@ -6,7 +6,7 @@ function CurrentWeather (props) {
     const [currentWeather, setCurrentWeather] = useState()
     console.log(city)
     useEffect(() => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
             .then((res ) => res.json())
             .then((json) => {
                 setCurrentWeather(json)
@@ -23,7 +23,7 @@ function CurrentWeather (props) {
               <p>{currentWeather.main?.temp}°F</p>
             <p>{currentWeather.main?.feels_like}°F</p>
            
-           <img src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`}></img>  
+           <img src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`}></img>  
             </div>
             }
            
